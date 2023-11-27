@@ -1,5 +1,7 @@
 # Called before project(...)
 macro(nvbench_load_rapids_cmake)
+  set(rapids-cmake-repo kkraus14/rapids-cmake)
+  set(rapids-cmake-branch spdlog_1.12_fmt_10)
   if(NOT EXISTS "${CMAKE_CURRENT_BINARY_DIR}/NVBENCH_RAPIDS.cmake")
     file(DOWNLOAD
       https://raw.githubusercontent.com/rapidsai/rapids-cmake/branch-23.12/RAPIDS.cmake
